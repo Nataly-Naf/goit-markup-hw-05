@@ -74,22 +74,25 @@ body {
 
 .menu-link::after{
   position: absolute;
-  bottom: 15;
+  bottom: -1px;
   left: 0;
   content: "";
   width: 100%;
    height: 4px;
-     border-radius: 4px;
+     border-radius: 2px;
   display: block;
+  /* background-color: #404BBF; */
  
 }
+.menu-link.active::after{
+ background-color: var(--main-color-button);
+}
+
 .menu-item{
   position: relative;
 }
 
-.menu-link.active::after{
- background-color: var(--main-color-button);
-}
+
 
 .menu-list {
   display: flex;
@@ -227,7 +230,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #404bbf;
+  color: rgba(46, 47, 66, 1);
    transition: color var(--transition-main);
 }
 .menu-link:active,
@@ -320,7 +323,7 @@ body {
   padding-right: 32px;
   margin-left: auto;
   margin-right: auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow var(--transition-main), border-radius var(--transition-main);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow var(--transition-main), border-radius var(--transition-main);
 
 }
 .order-btn:hover,
@@ -539,10 +542,11 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
     overflow: hidden;
 
 }
-.portfolio-item:hover .overlay {
+.portfolio-link:hover .overlay-text,
+.portfolio-link:focus .overlay-text {
   transform: translateY(0);
 }
-.overlay{
+.overlay-text{
   position: absolute;
   transform: translateY(100%);
   top: 0;
@@ -554,10 +558,9 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   padding-right: 32px;
   background-color: var(--main-color-button);
   transition: transform var(--transition-main);
-}
-.overlay-text{
   color: rgba(244, 244, 253, 1);
 }
+
 
 .portfolio-link{
   display: block;
@@ -670,7 +673,7 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   z-index: 100;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform var(--transition-main);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden{
   opacity: 0;
@@ -708,7 +711,7 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   border-radius: 50%;
   background-color: 
 rgba(231, 233, 252, 1);
-border-color: 1px solid rgba(0, 0, 0, 0.1);
+border: 1px solid rgba(0, 0, 0, 0.1);
 transition: 250ms;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -722,7 +725,7 @@ transition: 250ms;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:focus,
-.modal-close-btn:hover{
+.modal-close-icon:focus,
+.modal-close-icon:hover{
   fill: #ffffff;
 }
