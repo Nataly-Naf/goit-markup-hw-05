@@ -535,9 +535,15 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
 }
 .portfolio-thumb{
   position: relative;
+    overflow: hidden;
+
+}
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
 }
 .overlay{
   position: absolute;
+  transform: translateY(100%);
   top: 0;
   left: 0;
   width: 100%;
@@ -546,6 +552,7 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   padding-top: 40px;
   padding-right: 32px;
   background-color: var(--main-color-button);
+  transition: transform var(--transition-main);
 }
 .overlay-text{
   color: rgba(244, 244, 253, 1);
@@ -661,16 +668,29 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
-
+  z-index: 100;
+  transition: opacity var(--transition-main), visibility var(--transition-main), transform var(--transition-main);
+}
+.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden.modal {
+  opacity: 0;
+    transform: translate(50%, -100%);
 }
 .modal{
   position: absolute;
-  top: calc(50% - 292px);
-  left: calc(50% - 204px);
+  top: calc(50%);
+  left: calc(50%);
+  transform: translate(-50%, -50%);
   width: 408px;
   height: 584px;
   background-color: var(--background-color);
   border-radius: 10px;
+  transition: opacity var(--transition-main), transform var(--transition-main);
+  
 
 }
 .modal-close-btn{
