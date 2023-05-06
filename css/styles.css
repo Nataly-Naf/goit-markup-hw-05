@@ -219,6 +219,7 @@ body {
   height: 40px;
 }
 .menu-link {
+  position: relative;
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -226,7 +227,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--primary-title-color);
+  color: #404bbf;
    transition: color var(--transition-main);
 }
 .menu-link:active,
@@ -237,9 +238,11 @@ body {
 }
 .menu-link.link:hover::after {
   content: "";
+  bottom: -1px;
   width: 100%;
   height: 4px;
-  background: #404BBF;
+  border-radius: 2px;
+  background-color: #404bbf;
   margin-top: 20px;
   display: block;
   margin: 0 auto;
@@ -262,8 +265,7 @@ body {
 }
 
 
-.contact-tel {
-}
+
 .hero-cont {
   text-align: center;
 }
@@ -297,10 +299,9 @@ body {
 .hero-title-box {
   margin-bottom: 48px;
 }
+
 .order-btn {
-  border: none;
-}
-.order-btn {
+    border: none;
   display: block;
   min-width: 169px;
   height: 56px;
@@ -319,7 +320,7 @@ body {
   padding-right: 32px;
   margin-left: auto;
   margin-right: auto;
-  transition: background-color var(--transition-main), box-shadow var(--transition-main), border-radius var(--transition-main);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow var(--transition-main), border-radius var(--transition-main);
 
 }
 .order-btn:hover,
@@ -398,7 +399,7 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
- transition: var(--transition-main);
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .filter-btn:active {
@@ -484,7 +485,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   width: 168px;
   height: 88px;
   border-radius: 4px;
-  transition: border var(--transition-main), color var(--transition-main);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   
  }
@@ -669,7 +670,7 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   z-index: 100;
-  transition: opacity var(--transition-main), visibility var(--transition-main), transform var(--transition-main);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform var(--transition-main);
 }
 .is-hidden{
   opacity: 0;
@@ -686,10 +687,11 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   left: calc(50%);
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
-  background-color: var(--background-color);
-  border-radius: 10px;
-  transition: opacity var(--transition-main), transform var(--transition-main);
+  min-height: 576px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 
 }
@@ -706,13 +708,21 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   border-radius: 50%;
   background-color: 
 rgba(231, 233, 252, 1);
-border-color: rgba(0, 0, 0, 0.1);
+border-color: 1px solid rgba(0, 0, 0, 0.1);
 transition: 250ms;
-  transition: var(--transition-main);
-
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.modal-close-btn:focus,
+.modal-close-btn:hover{
+  background-color: #404bbf;
+  border: none;
 }
 .modal-close-icon{
   fill: #2E2F42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.modal-close-btn:focus,
+.modal-close-btn:hover{
+  fill: #ffffff;
 }
