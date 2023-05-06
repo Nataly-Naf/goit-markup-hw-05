@@ -552,10 +552,11 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  padding-left: 32px;
-  padding-top: 40px;
-  padding-right: 32px;
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+ padding: 40px 32px;
   background-color: var(--main-color-button);
   transition: transform var(--transition-main);
   color: rgba(244, 244, 253, 1);
@@ -718,7 +719,7 @@ transition: 250ms;
 .modal-close-btn:focus,
 .modal-close-btn:hover{
   background-color: #404bbf;
-  border: none;
+  border: none; 
 }
 .modal-close-icon{
   fill: #2E2F42;
@@ -728,4 +729,9 @@ transition: 250ms;
 .modal-close-icon:focus,
 .modal-close-icon:hover{
   fill: #ffffff;
+}
+
+.modal-close-btn:focus .modal-close-icon,
+.modal-close-btn:hover .modal-close-icon{
+ fill: #ffffff;
 }
