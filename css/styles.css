@@ -12,6 +12,7 @@
   --color-logo-add-light: #f4f4fd;
   --color-text-light:#ffffff;
   --icon-main-color: #8e8f99;
+  --transition-main: 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 h1,
 h2,
@@ -226,6 +227,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-title-color);
+   transition: color var(--transition-main);
 }
 .menu-link:active,
 .menu-link:hover,
@@ -248,6 +250,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--secondary-font-color);
+  transition: color var(--transition-main);
 }
 .contact-link:active,
 .contact-link:hover,
@@ -316,10 +319,12 @@ body {
   padding-right: 32px;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color var(--transition-main), box-shadow var(--transition-main), border-radius var(--transition-main);
+
 }
 .order-btn:hover,
 .order-btn:focus {
-  background: #404bbf;
+  background-color: #404bbf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
@@ -393,6 +398,8 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
+ transition: var(--transition-main);
+
 }
 .filter-btn:active {
   font-family: Roboto, sans-serif;
@@ -409,11 +416,12 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+    transition: color var(--transition-main), background-color var(--transition-main), box-shadow var(--transition-main), border-radius var(--transition-main), border var(--transition-main);
 }
 .filter-btn:hover,
 .filter-btn:focus {
   color: #ffffff;
-  background: #404bbf;
+  background-color: #404bbf;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -461,6 +469,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 .customers-icon{
   fill:currentColor;
+    transition: fill var(--transition-main);
 }
 .customers-icon:hover,
 .customers-icon:focus{
@@ -475,6 +484,9 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   width: 168px;
   height: 88px;
   border-radius: 4px;
+  transition: border var(--transition-main), color var(--transition-main);
+
+  
  }
 .customers-link:hover,
 .customers-link:focus{
@@ -503,6 +515,8 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
+      transition: box-shadow var(--transition-main);
+
 }
 .portfolio-item: :nth-last-child(3n) {
   margin-right: 0;
@@ -539,6 +553,8 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
 
 .portfolio-link{
   display: block;
+      transition: box-shadow var(--transition-main);
+
 }
 .portfolio-link:hover,
 .portfolio-link:focus{
@@ -592,6 +608,8 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   align-items: center;
   background-color: var(--main-color-button);
   border-radius: 50%;
+      transition: background-color var(--transition-main);
+
 }
 .social-media-link:hover,
 .social-media-link:focus{
@@ -619,6 +637,8 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   height: 100%;
   background-color: var(--main-color-button);
   border-radius: 50%;
+      transition: background-color var(--transition-main);
+
 }
 .employee-social-media:hover,
 .employee-social-media:focus{
@@ -634,7 +654,7 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
 
 /* Modal-window */
 .backdrop{
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -667,6 +687,9 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   background-color: 
 rgba(231, 233, 252, 1);
 border-color: rgba(0, 0, 0, 0.1);
+transition: 250ms;
+  transition: var(--transition-main);
+
 
 }
 .modal-close-icon{
