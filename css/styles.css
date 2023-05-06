@@ -12,7 +12,7 @@
   --color-logo-add-light: #f4f4fd;
   --color-text-light:#ffffff;
   --icon-main-color: #8e8f99;
-  --transition-main: 3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 h1,
 h2,
