@@ -81,11 +81,11 @@ body {
    height: 4px;
      border-radius: 2px;
   display: block;
-  background-color: #404BBF;
+  /* background-color: #404BBF; */
  
 }
 .menu-link.active::after{
- background-color: var(--main-color-button);
+ background-color: #404BBF;
 }
 
 .menu-item{
@@ -230,7 +230,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #404bbf;
+  color: rgba(46, 47, 66, 1);
    transition: color var(--transition-main);
 }
 .menu-link:active,
